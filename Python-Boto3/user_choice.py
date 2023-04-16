@@ -20,10 +20,14 @@ def credentials_check():
         return False
     
 os.system('clear')
-user_input = ""
 if credentials_check():
-    if user_input == str(input("\n Do you want to create S3 buckets(-y-) :")).strip():
-        print(create_buckets)
+    user_input = str(input("\n Do you want to create S3 buckets(-y-) : ")).strip()
+    if user_input == 'y':
+        bucket_created = create_buckets()
+        if bucket_created != False:
+            print("\n Created S3 buckets!")
+        else:
+            print("\n Check error logs!")
     else:
         bucket_list = get_bucketlist()
         if bucket_list != False:    
