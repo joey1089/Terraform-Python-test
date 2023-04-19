@@ -29,7 +29,7 @@ def delete_duckets(bucket_list):
             s3_client = boto3.client("s3")
             for bucket_name in bucket_list:
                 response = s3_client.delete_bucket(Bucket=bucket_name)
-            print(response)
+            # print(response)
             return True
         except ClientError as e:
             logging.error(e)
