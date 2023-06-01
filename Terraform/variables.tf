@@ -3,5 +3,5 @@
 #Variable Declaration
 variable "bucket_name" {
   type = list
-  default  = ["testdemo-jps3-1", "testdemo-jps3-2", "testdemo-jps3-3"]
+  default  = ["terraform-test-jps3-1", "terraform-test-jps3-2", "terraform-test-jps3-3"]
 }
